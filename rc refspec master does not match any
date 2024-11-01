@@ -1,0 +1,18 @@
+[33mcommit ba038fec6b0242c84bf4e1dbda9c6d97780f16ac[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 704dfa0 d767150
+Author: BlaiseTAPPA <161386454+BlaiseTAPPA@users.noreply.github.com>
+Date:   Fri Nov 1 19:14:34 2024 +0000
+
+    Merge branch 'main' of https://github.com/BlaiseTAPPA/e-commerce-front
+
+[33mcommit d7671509b464ad6fb00a5be6ba59add22fcfe66c[m
+Author: BlaiseTAPPA <161386454+BlaiseTAPPA@users.noreply.github.com>
+Date:   Fri Nov 1 19:13:05 2024 +0000
+
+    Initial commit
+
+[33mcommit 704dfa0f8088f123dd83944fc8bac72ac5a60d3c[m
+Author: BlaiseTAPPA <161386454+BlaiseTAPPA@users.noreply.github.com>
+Date:   Fri Nov 1 12:45:28 2024 +0000
+
+    Initial commit
