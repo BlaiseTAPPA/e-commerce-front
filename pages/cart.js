@@ -120,7 +120,6 @@ export default function CartPage() {
     }
 
     async function goToPaymentMomo() {
-        // Calculer le montant total basé sur les produits du panier
         let totalAmount = 0;
         for (const productId of cartProducts) {
             const price = products.find(p => p._id === productId)?.price || 0;
