@@ -119,6 +119,29 @@ export default function CartPage() {
         }
     }
 
+    async function goToPaymentMomo() {
+        // Calculer le montant total basé sur les produits du panier
+        let totalAmount = 0;
+        for (const productId of cartProducts) {
+            const price = products.find(p => p._id === productId)?.price || 0;
+            totalAmount += price;
+        }
+    
+        // Obtenir la liste des noms de produits commandés
+        const productNames = products
+            .filter(product => cartProducts.includes(product._id))
+            .map(product => product.title)
+            .join(", ");
+    
+        // Construire l'URL de paiement avec les informations nécessaires
+        const paymentUrl = `https://paygateglobal.com/v1/page?token=71dbb5ce-abf0-4924-9dad-e7f936633cf5` +
+            `&amount=${totalAmount}` +
+            `&description=${encodeURIComponent(productNames)}` +
+            `&identifier=${encodeURIComponent(email)}`;
+    
+        // Rediriger vers l'URL de paiement
+        window.location.href = paymentUrl;
+    }
     if (isSuccess) {
         return (
             <>
@@ -229,7 +252,12 @@ export default function CartPage() {
 
                             <Button black block
                                 onClick={goToPayment}>
-                                Continue to payment
+                                PAYMENT BY CREDIT CARD
+                            </Button>
+                            <p></p>
+                            <Button black block
+                                onClick={goToPaymentMomo}>
+                                PAYMENT BY MOBILE MONEY (Tmoney / Flooz)
                             </Button>
                         </Box>
                     )}
